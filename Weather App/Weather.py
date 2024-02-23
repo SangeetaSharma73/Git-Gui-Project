@@ -1,6 +1,9 @@
 from tkinter import *
 from tkinter import ttk
 import requests,json
+import random
+import randomcolor
+color=randomcolor.RandomColor().generate()
 def get_data():
     city=city_name.get()
     if not city:
@@ -24,7 +27,7 @@ def get_data():
             pres1.config(text="")
 window=Tk()
 window.title('Prepleaf by Masai')
-window.config(bg='Light Green') 
+window.config(bg=color) 
 window.geometry("700x500")
 label_name=Label(window,bg='Sky blue',text='Welcome in Weather App',font=('Time New Roman',30,'bold'))
 label_name.place(x=25,y=40,height=40,width=625)
